@@ -1,0 +1,12 @@
+<template>
+    <lightning-button label='Method-1' onclick={handleClick}></lightning-button>
+    <lightning-button label='Method-2' onclick={handleClick}></lightning-button>
+
+    <template if:true={mapMarkers}>
+        <lightning-map 
+        map-markers={mapMarkers}
+        zoom-level="19"
+        ></lightning-map>
+    </template>
+
+</template>
