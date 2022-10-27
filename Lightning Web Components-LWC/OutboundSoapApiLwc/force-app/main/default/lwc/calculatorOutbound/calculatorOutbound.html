@@ -1,0 +1,10 @@
+<template>
+    <h1>Calculator Outbound- We will use soap api to call third party app from salesforce</h1>
+    <lightning-input type="number" data-name="input1" name="number1" value={num1}></lightning-input>
+    <lightning-input type="number" data-name="input2" name="number2" value={num2}></lightning-input>
+    <h1>{total}</h1>
+
+    <lightning-button type="Submit" variant="Success" label="Add" onclick={doAdd}></lightning-button>
+   
+    
+</template>
