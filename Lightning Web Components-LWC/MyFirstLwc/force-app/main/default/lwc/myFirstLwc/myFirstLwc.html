@@ -1,0 +1,30 @@
+<template>
+    <h1>My First Lightning Web Component inside aura app</h1>
+    <p>{variableValue}</p>
+    <lightning-input label="Lightning Input Component" name="lwcInput" value={inputTextVariable} onchange={handleChange}></lightning-input>
+    <p>{inputTextVariable}</p>
+
+    <p>hello {testVar}</p>
+
+    <div>
+        <lightning-button label="Get Contacts" variant="submit" onclick={handleClick} ></lightning-button>
+    </div>
+
+    <div>
+        <h1>Contacts</h1>
+        <template for:each={result} for:item="contact">
+             <p key={contact.Id}>
+                 {contact.Name}
+             </p>
+        </template>
+    </div>
+
+    <div>
+        <h1>Accounts</h1>
+        <template for:each={accResult} for:item="account">
+             <p key={account.Id}>
+                 {account.Id}   {account.Name}
+             </p>
+        </template>
+    </div>
+</template>

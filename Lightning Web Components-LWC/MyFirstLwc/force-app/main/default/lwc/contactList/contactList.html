@@ -1,0 +1,27 @@
+<template>
+    <h1>Conact List Lwc</h1>
+
+    <div>
+        <h1>Contacts</h1>
+        <!--<template for:each={conResult} for:item="contact">
+             <p key={contact.Id}>
+                 {contact.LastName}
+             </p>
+        </template>-->
+    </div>
+
+    <div>
+
+        <lightning-datatable
+        key-field="Id"
+        data={conResult}
+        columns={columns}
+    ></lightning-datatable>
+    </div>
+
+    <div>
+        <template if:true={errors}>
+            <p>{errors}</p>
+        </template>
+    </div>
+</template>
